@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta name="apple-mobile-web-app-capable" content="yes">	
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name = "viewport" content = "width = device-width,
+       initial-scale = 1.0, user-scalable = no">
+    <title>Chinchiror.in</title>
+    <link rel="stylesheet" href="/stylesheets/add2home.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<div id="wrapper">
+	    <div id="title">
+		    <h1>Chinchirori.in</h1>
+		    <h2>--- A Dice Game ---</h2>
+		</div>
+		
+		<div id="betting">
+  			<div id="bets">	
+  				<form>
+  					<input id="current-bet" name="current-bet" type="range" min=1 max=10 value=1>
+  				</form>
+  				<div id="bet-container">
+      				<h6>Bet</h6>
+      				<div class="output credits" for="current-bet" id="the-bet">1</div>
+      			</div>
+			</div>
+		</div>
+
+		<div id="credits">
+			<button id="play">ROLL!</button>
+			<button id="replay" class="gone">RESET GAME</button>
+			<div id="credit-container"><h6>Credits:&nbsp;</h6><span id="user-credits" class="credits"></span></div>
+		</div>
+		
+		<div class="dice-container">
+			<canvas class="dice" id="dice1" width="60" height="60" style="border:1px solid #000000;"></canvas>
+			<canvas class="dice" id="dice2" width="60" height="60" style="border:1px solid #000000;"></canvas>
+			<canvas class="dice" id="dice3" width="60" height="60" style="border:1px solid #000000;"></canvas>
+		</div>
+		<div class="dice-container">
+			<canvas class="dice" id="dice4" width="60" height="60" style="border:1px solid #000000;"></canvas>
+			<canvas class="dice" id="dice5" width="60" height="60" style="border:1px solid #000000;"></canvas>
+			<canvas class="dice" id="dice6" width="60" height="60" style="border:1px solid #000000;"></canvas>
+		</div>
+		<div class="score-container">
+			<div class="score">
+				<h2>Bank:&nbsp;<span id="score-a">0</span><br />
+				Player:&nbsp;<span id="score-b">0</span></h2>
+				<div id="result">
+					<div id="result-inset"></div>
+					<h1><span id="winner-winner"></span></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="show-rules">
+		<a href="#" class="toggle-rules">-- Rules --</a>
+	</div>
+	<div id="rules">
+		<p>Chinchirorin is a game of dice traditionally played with three six sided die in a bowl.</p>
+		<ol><h2>Rules:</h2>
+			<li><h3>Storm / Triples</h3>
+				<ol>
+					<li>Three of a kind of 2 - 6 is an automatically win.
+					<li>Three 1's is an automatic loss.
+					<li>When a Storm / Triple is thrown you win or lose triple your bet.
+				</ol>
+			<li><h3>Straights</h3>
+				<ol>
+				 	<li>A straight of 1,2,3 is an automatic loss.
+				 	<li>A straight of 4,5,6 is an automatic win.
+				 	<li>When a Straight is thrown you win or lose double your bet
+				</ol>
+			<li><h3>Doubles</h3> 
+				<ol>
+					<li>When doubles are thrown then the number of the third die is your score.
+					<li>The higher of the two scores is awarded the amount of the bet.
+				</ol>
+			<li><h3>Draw</h3>
+				<ol> 
+					<li>When neither player throws a winning combination the game is a draw.
+				</ol>
+			<li><h3>Assumptions:</h3>When a player rolls a straight the other player's throw is ignored. It is always assumed that the Bank throws first, therefore, if both players throw either Triples or Straights the Banks's throw is the accepted combination.
+		</ol>
+		<div class="show-rules">
+			<a href="#" class="toggle-rules">
+				^ Close Rules ^
+			</a>
+		</div>
+	</div>	
+	<script type="application/javascript" src="/javascripts/add2home.js"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="javascripts/script.js"></script>
+  </body>
+</html>
